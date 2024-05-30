@@ -45,6 +45,6 @@ def add(request):
         doc_ref = db.collection('products').document(custom_doc_id)
         doc_ref.set(data)
         
-        return redirect('home')
+        return render(request,'index.html')
     else:
         return render(request, "add.html")
